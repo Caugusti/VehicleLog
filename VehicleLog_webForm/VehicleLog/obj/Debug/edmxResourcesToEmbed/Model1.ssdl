@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="masterModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="VehDB">
+    <Key>
+      <PropertyRef Name="Id_Vehicle" />
+    </Key>
+    <Property Name="Id_Vehicle" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VehicleModel" Type="varchar" MaxLength="50" />
+    <Property Name="TAG" Type="varchar" MaxLength="50" />
+    <Property Name="Color" Type="varchar" MaxLength="50" />
+    <Property Name="FuelType" Type="varchar" MaxLength="50" />
+    <Property Name="ModelYear" Type="varchar" MaxLength="50" />
+    <Property Name="RegistrationDate" Type="varchar" MaxLength="50" />
+    <Property Name="LastUpdate" Type="varchar" MaxLength="50" />
+    <Property Name="Id_VehicleTable" Type="int" />
+  </EntityType>
+  <EntityType Name="VehicleDB">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Vehicle" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="masterModelStoreContainer">
+    <EntitySet Name="VehDB" EntityType="Self.VehDB" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VehicleDB" EntityType="Self.VehicleDB" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,16 @@
+D:\carol\Documents\Projects\VehicleLog_winForm\VehicleLog_winForm\bin\Debug\netcoreapp3.1\VehicleLog_winForm.exe
+D:\carol\Documents\Projects\VehicleLog_winForm\VehicleLog_winForm\bin\Debug\netcoreapp3.1\VehicleLog_winForm.deps.json
+D:\carol\Documents\Projects\VehicleLog_winForm\VehicleLog_winForm\bin\Debug\netcoreapp3.1\VehicleLog_winForm.runtimeconfig.json
+D:\carol\Documents\Projects\VehicleLog_winForm\VehicleLog_winForm\bin\Debug\netcoreapp3.1\VehicleLog_winForm.runtimeconfig.dev.json
+D:\carol\Documents\Projects\VehicleLog_winForm\VehicleLog_winForm\bin\Debug\netcoreapp3.1\VehicleLog_winForm.dll
+D:\carol\Documents\Projects\VehicleLog_winForm\VehicleLog_winForm\bin\Debug\netcoreapp3.1\VehicleLog_winForm.pdb
+D:\carol\Documents\Projects\VehicleLog_winForm\VehicleLog_winForm\obj\Debug\netcoreapp3.1\VehicleLog_winForm.csprojAssemblyReference.cache
+D:\carol\Documents\Projects\VehicleLog_winForm\VehicleLog_winForm\obj\Debug\netcoreapp3.1\VehicleLog_winForm.csproj.GenerateResource.cache
+D:\carol\Documents\Projects\VehicleLog_winForm\VehicleLog_winForm\obj\Debug\netcoreapp3.1\VehicleLog_winForm.AssemblyInfoInputs.cache
+D:\carol\Documents\Projects\VehicleLog_winForm\VehicleLog_winForm\obj\Debug\netcoreapp3.1\VehicleLog_winForm.AssemblyInfo.cs
+D:\carol\Documents\Projects\VehicleLog_winForm\VehicleLog_winForm\obj\Debug\netcoreapp3.1\VehicleLog_winForm.csproj.CoreCompileInputs.cache
+D:\carol\Documents\Projects\VehicleLog_winForm\VehicleLog_winForm\obj\Debug\netcoreapp3.1\VehicleLog_winForm.dll
+D:\carol\Documents\Projects\VehicleLog_winForm\VehicleLog_winForm\obj\Debug\netcoreapp3.1\VehicleLog_winForm.pdb
+D:\carol\Documents\Projects\VehicleLog_winForm\VehicleLog_winForm\obj\Debug\netcoreapp3.1\VehicleLog_winForm.genruntimeconfig.cache
+D:\carol\Documents\Projects\VehicleLog_winForm\VehicleLog_winForm\obj\Debug\netcoreapp3.1\VehicleLog_winForm.Log.resources
+D:\carol\Documents\Projects\VehicleLog_winForm\VehicleLog_winForm\obj\Debug\netcoreapp3.1\VehicleLog_winForm.Properties.Resources.resources
