@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Vehicle_Log_MVC.VehicleType>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="wrapper">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="content-panel" style="padding:20px">
+                <p>
+                    @Html.ActionLink("Add New", "Create", null, new { @class = "btn btn-default" })
+                </p>
+                <table class="table">
+                    <tr>
+                        <th>
+                            Family
+                        </th>
+                        <th>
+                            Vehicle
+                        </th>
+                        <th>
+                            Vehicle Type
+                        </th>
+                        <th></th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Family)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Vehicle)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.VehicleType1)
+                            </td>
+                            <td>
+                                @Html.ActionLink(" ", "Details", new { id = item.Id }, new { @class = "btn btn-success btn-xs fa fa-file-text-o" }) |
+                                @Html.ActionLink(" ", "Edit", new { id = item.Id }, new { @class = "btn btn-primary btn-xs fa fa-pencil" }) |
+                                @Html.ActionLink(" ", "Delete", new { id = item.Id }, new { @class = "btn btn-danger btn-xs fa fa-trash-o" })
+                            </td>
+                        </tr>
+                    }
+
+                </table>
+            </div>
+        </div>
+    </div>
+</section>

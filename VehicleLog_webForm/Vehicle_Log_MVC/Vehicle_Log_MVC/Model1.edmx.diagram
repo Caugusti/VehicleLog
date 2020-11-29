@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b009dcb4f7fc41dab200bbb6df01cf5f" Name="Diagram1">
+        <EntityTypeShape EntityType="masterModel.Locations" Width="1.5" PointX="2.75" PointY="3" />
+        <EntityTypeShape EntityType="masterModel.VehicleType" Width="1.5" PointX="4.5" PointY="0.75" />
+        <EntityTypeShape EntityType="masterModel.ActiveVehicleDB" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="masterModel.Fuel" Width="1.5" PointX="2.75" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

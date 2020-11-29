@@ -1,0 +1,58 @@
+﻿@model Vehicle_Log_MVC.Fuel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="wrapper">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="content-panel" style="padding:20px">
+                <h2>Details</h2>
+
+                <div>
+                    <hr />
+                    <dl class="dl-horizontal">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Fuel_Type)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Fuel_Type)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Fuel1)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Fuel1)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Density)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Density)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Nationality)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Nationality)
+                        </dd>
+
+                    </dl>
+                </div>
+                <p>
+                    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }, new { @class = "btn btn-primary" }) |
+                    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-default" })
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

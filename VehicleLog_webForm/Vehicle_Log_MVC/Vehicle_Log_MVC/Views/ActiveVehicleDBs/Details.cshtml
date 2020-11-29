@@ -1,0 +1,138 @@
+﻿@model Vehicle_Log_MVC.ActiveVehicleDB
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="wrapper">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="content-panel" style="padding:20px">
+                <h2>Details</h2>
+
+                <div>
+                    <hr />
+                    <dl class="dl-horizontal">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.RegistrationDate)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.RegistrationDate)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.VehicleType)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.VehicleType)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Locations)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Locations)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.VehicleModel)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.VehicleModel)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.TAG)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.TAG)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.FuelType)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.FuelType)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.ModelYear)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.ModelYear)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Engine)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Engine)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Power)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Power)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Weight)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Weight)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Color)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Color)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Responsible)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Responsible)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Comments)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Comments)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.LastUpdate)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.LastUpdate)
+                        </dd>
+
+                    </dl>
+                </div>
+                <p>
+                    @Html.ActionLink("Edit", "Edit", new { id = Model.Id_Vehicle }, new { @class = "btn btn-primary" }) |
+                    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-default" })
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

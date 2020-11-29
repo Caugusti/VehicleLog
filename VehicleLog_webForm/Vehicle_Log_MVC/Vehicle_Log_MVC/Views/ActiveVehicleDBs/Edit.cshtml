@@ -1,0 +1,174 @@
+﻿@model Vehicle_Log_MVC.ActiveVehicleDB
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="wrapper">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="content-panel" style="padding:20px">
+                <script src="~/Scripts/jquery-3.4.1.js"></script>
+                <h2>Edit Vehicle</h2>
+
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-horizontal">
+                        <hr />
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        @Html.HiddenFor(model => model.Id_Vehicle)
+
+                        <script type="text/javascript">
+                            $(document).ready(function () {
+                                $("#selectVehicleType").val($("#vehicleType").val()).change();
+                            })
+                        </script>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-2" style="font-size: large">Vehicle Type</label>
+                            <div class="col-md-10">
+                                <input type="hidden" id="vehicleType" value="@Model.VehicleType" />
+                                <select name="VehicleType" id="selectVehicleType" class="form-control">
+                                    @{
+                                        foreach (var item in (List<Vehicle_Log_MVC.VehicleType>)ViewBag.vehicleTypeList)
+                                        {
+                                            <option value="@item.Family">@item.Family</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                        </div>
+
+                        <script type="text/javascript">
+                            $(document).ready(function () {
+                                $("#selectLocations").val($("#locations").val()).change();
+                            })
+                        </script>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-2" style="font-size: large">Locations</label>
+                            <div class="col-md-10">
+                                <input type="hidden" id="locations" value="@Model.Locations" />
+                                <select name="Locations" id="selectLocations" class="form-control">
+                                    @{
+                                        foreach (var item in (List<Vehicle_Log_MVC.Locations>)ViewBag.locationsList)
+                                        {
+                                            <option value="@item.Ford_Locations">@item.Ford_Locations</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-2" style="font-size: large">Vehicle Model</label>
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.VehicleModel, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.VehicleModel, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-2" style="font-size: large">TAG</label>
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.TAG, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.TAG, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <script type="text/javascript">
+                            $(document).ready(function () {
+                                $("#selectFuel").val($("#fuel").val()).change();
+                            })
+                        </script>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-2" style="font-size: large">Fuel Type</label>
+                            <div class="col-md-10">
+                                <input type="hidden" id="fuel" value="@Model.FuelType" />
+                                <select name="FuelType" id="selectFuel" class="form-control">
+                                    @{ 
+                                        foreach (var item in (List<Vehicle_Log_MVC.Fuel>)ViewBag.fuelList)
+                                        {
+                                            <option value="@item.Fuel_Type">@item.Fuel_Type</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-2" style="font-size: large">Vehicle Year</label>
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.ModelYear, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.ModelYear, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-2" style="font-size: large">Engine</label>
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Engine, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Engine, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-2" style="font-size: large">Power</label>
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Power, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Power, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-2" style="font-size: large">Weight</label>
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Weight, new { htmlAttributes = new { @class = "form-control", @type = "number", @min = "0", @step = "0.01", @value = "0" } })
+                                @Html.ValidationMessageFor(model => model.Weight, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-2" style="font-size: large">Color</label>
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Color, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Color, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-2" style="font-size: large">Responsible</label>
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Responsible, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Responsible, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-2" style="font-size: large">Comments</label>
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Comments, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Comments, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <input type="submit" value="Save" class="btn btn-success" />
+                                @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-default" })
+                            </div>
+                        </div>
+                    </div>
+                }
+
+                @section Scripts {
+                    @Scripts.Render("~/bundles/jqueryval")
+                }
+            </div>
+        </div>
+    </div>
+</section>
