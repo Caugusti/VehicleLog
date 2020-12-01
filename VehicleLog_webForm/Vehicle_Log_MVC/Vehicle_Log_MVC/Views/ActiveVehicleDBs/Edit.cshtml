@@ -5,6 +5,12 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+@*
+    Este módulo representa a View da interface de edição do item selecionado do banco de dados ActiveVehicleDB.
+    Nele será possível configurar e formatar a interface e seus componentes, como os campos de texto,
+    de listas e os botões.
+*@
+
 <section class="wrapper">
     <div class="row">
         <div class="col-md-12">
@@ -90,7 +96,7 @@
                             <div class="col-md-10">
                                 <input type="hidden" id="fuel" value="@Model.FuelType" />
                                 <select name="FuelType" id="selectFuel" class="form-control">
-                                    @{ 
+                                    @{
                                         foreach (var item in (List<Vehicle_Log_MVC.Fuel>)ViewBag.fuelList)
                                         {
                                             <option value="@item.Fuel_Type">@item.Fuel_Type</option>

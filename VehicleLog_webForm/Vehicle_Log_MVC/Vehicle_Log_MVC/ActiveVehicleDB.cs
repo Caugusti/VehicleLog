@@ -11,7 +11,8 @@ namespace Vehicle_Log_MVC
 {
     using System;
     using System.Collections.Generic;
-    
+
+    // Esta classe representa o componente model do banco de dados ActiveVehicleDB.
     public partial class ActiveVehicleDB
     {
         public int Id_Vehicle { get; set; }

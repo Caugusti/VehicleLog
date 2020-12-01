@@ -27,7 +27,7 @@ namespace Vehicle_Log_MVC.Controllers
         }
 
         // GET: ActiveVehicleDBs/Details/5
-        // 
+        // Este método irá abrir a interface de detalhes referente ao item escolhido na interface Index. 
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -43,6 +43,8 @@ namespace Vehicle_Log_MVC.Controllers
         }
 
         // GET: ActiveVehicleDBs/Create
+        // Este método irá abrir a interface de criação de novos veículos, preenchendo os campos de dropdown
+        // com os bancos de dados de Fuel, Ford Locations e Vehicle Type.
         public ActionResult Create()
         {
             var fuelList = db.Fuel.ToList();
@@ -58,6 +60,8 @@ namespace Vehicle_Log_MVC.Controllers
         // POST: ActiveVehicleDBs/Create
         // Para proteger-se contra ataques de excesso de postagem, ative as propriedades específicas às quais deseja se associar. 
         // Para obter mais detalhes, confira https://go.microsoft.com/fwlink/?LinkId=317598.
+
+        // Este método irá salvar os dados preenchidos na interface em seu banco de dados (ActiveVehicleDB).
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Id_Vehicle,RegistrationDate,VehicleType,Locations,VehicleModel,TAG,FuelType,ModelYear,Engine,Power,Weight,Color,Responsible,Comments,LastUpdate")] ActiveVehicleDB activeVehicleDB)
@@ -75,6 +79,8 @@ namespace Vehicle_Log_MVC.Controllers
         }
 
         // GET: ActiveVehicleDBs/Edit/5
+        // Este método irá abrir a interface para edição do véiculo selecionado na interface Index.
+        // Irá buscar em seu banco de dados, os dados referentes ao veículo e inseri-los nos campos de edição.
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -97,6 +103,8 @@ namespace Vehicle_Log_MVC.Controllers
         // POST: ActiveVehicleDBs/Edit/5
         // Para proteger-se contra ataques de excesso de postagem, ative as propriedades específicas às quais deseja se associar. 
         // Para obter mais detalhes, confira https://go.microsoft.com/fwlink/?LinkId=317598.
+
+        // Este método irá efetuar a ação de salvar os novos dados do veículo selecionado.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "Id_Vehicle,VehicleType,Locations,VehicleModel,TAG,FuelType,ModelYear,Engine,Power,Weight,Color,Responsible,Comments,LastUpdate")] ActiveVehicleDB activeVehicleDB)
@@ -113,6 +121,8 @@ namespace Vehicle_Log_MVC.Controllers
         }
 
         // GET: ActiveVehicleDBs/Delete/5
+        // Este método irá apresentar a tela com os detalhes do veículo selecionado na interface Index,
+        // para que se verifique os dados antes de deletá-los.
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -128,6 +138,7 @@ namespace Vehicle_Log_MVC.Controllers
         }
 
         // POST: ActiveVehicleDBs/Delete/5
+        // Este método irá executar a ação de deletar os dados do veículo selecionado.
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
